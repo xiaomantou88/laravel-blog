@@ -22,7 +22,7 @@ class HomeController extends Controller {
 	 */
 	public function __construct()
 	{
-		//$this->middleware('auth');
+		$this->middleware('auth');
 	}
 
 	/**
@@ -33,8 +33,27 @@ class HomeController extends Controller {
 	public function index()
 	{
 		$articles = Article::take(5)->get();
-		//var_dump($articles);
 		return view('home',['articleArr'=>$articles]);
+	}
+
+	/**
+	 * 博文详情页面
+	 * @return Response
+	 */
+	public function article($id)
+	{
+		$article = Article::find($id);
+		return view('article',['article'=>$article]);
+	}
+
+	/**
+	 * 关于页面
+	 * @return [type] [description]
+	 */
+	public function about()
+	{
+		$article = Article::find(2);
+		return view('about',['article'=>$article]);
 	}
 
 }

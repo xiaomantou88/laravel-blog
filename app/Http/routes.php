@@ -12,7 +12,8 @@
 */
 
 Route::get('/', 'HomeController@index');
-
+Route::get('article/{id}', 'HomeController@article');
+Route::get('about', 'HomeController@about');
 //Route::get('home', 'HomeController@index');
 
 Route::controllers([
