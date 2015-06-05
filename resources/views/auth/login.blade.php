@@ -47,9 +47,10 @@
 
 						<div class="form-group">
 							<div class="col-md-6 col-md-offset-4">
-								<button type="submit" class="btn btn-primary">Login</button>
+								<button type="submit" class="btn btn-primary">登录</button>
 
-								<a class="btn btn-link" href="{{ url('/password/email') }}">Forgot Your Password?</a>
+								<a class="btn btn-link" href="{{ url('/password/email') }}">忘记密码</a>
+								<a class="btn btn-link" href="{{ url('/auth/register') }}">注册新用户</a>
 							</div>
 						</div>
 					</form>

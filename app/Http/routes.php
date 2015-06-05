@@ -14,7 +14,11 @@
 Route::get('/', 'HomeController@index');
 Route::get('article/{id}', 'HomeController@article');
 Route::get('about', 'HomeController@about');
-//Route::get('home', 'HomeController@index');
+Route::get('home', 'HomeController@index');
+//Route::get('admin', 'AdminController@index');
+//Route::get('admin/article', 'AdminController@article');
+
+Route::controller('admin', 'AdminController');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
